@@ -12,7 +12,7 @@ Kristina's personal portfolio: a senior growth marketer with hands-on UX trainin
 ## Structure
 - `index.html`: homepage. Sections by id: `#top` (hero; the portrait is hidden on mobile), `#work` (marketing case-study cards), `#services`, `#design` (UX case-study cards). Footer has the CV download and LinkedIn.
 - Navigation: desktop "Work" dropdown (`.nav-dd-menu`) with Marketing → `index.html#work` and Design → `index.html#design`; on mobile a `<details class="nav-mobile">` burger menu with the same links as sub-items. Keep both in sync when adding nav items.
-- Marketing case studies: `grow-by-mia.html`, `katalysta.html`, `vitesse-running.html`, `geegee.html`, `ahoy-connect.html`.
+- Marketing case studies: `homefans.html` (current role, first card in `#work`), `grow-by-mia.html`, `katalysta.html`, `vitesse-running.html`, `geegee.html`, `ahoy-connect.html`.
 - UX case studies: `learnify.html`, `drops-of-emotions.html`, `mymultisport.html`.
 - `prototypes/`: clickable prototypes linked from the UX case studies (`learnify/`, `learnify-desktop/`, `drops/`).
 - `assets/`: images (webp/jpg/png, already compressed) and `Kristina_Gaytandzhieva_CV_2026.pdf`. To update the CV, replace the PDF and keep the file name.
@@ -21,7 +21,7 @@ Kristina's personal portfolio: a senior growth marketer with hands-on UX trainin
 
 ## The "next project" chain
 Each case study ends with a link to the next one, forming a loop:
-grow-by-mia → katalysta → vitesse-running → geegee → ahoy-connect → learnify → drops-of-emotions → mymultisport → grow-by-mia.
+homefans → grow-by-mia → katalysta → vitesse-running → geegee → ahoy-connect → learnify → drops-of-emotions → mymultisport → homefans.
 
 ## Adding a case study
 1. Copy the closest existing page (marketing or UX) to `new-name.html`; replace title, meta description, hero, sections, images and results. Put images in `assets/` (compress: max ~1600px wide, webp or jpg).
@@ -37,6 +37,7 @@ grow-by-mia → katalysta → vitesse-running → geegee → ahoy-connect → le
 Fonts: **Bricolage Grotesque** (headings) + **Figtree** (text), from Google Fonts. Colors: ink `#040005`, text grey `#5C5762`, background `#FFFDFA`, sand `#F5EFE6`, line `#E9E2D6`, yellow accent `#FFC94C`, deep purple `#300045`.
 
 ## Facts that appear on the site
+- Homefans (since Aug 2026): leads the social media and PPC teams; owns Meta Ads and email (Klaviyo); works with host onboarding (supply), sales and devs; runs the team on monday.com; Claude connected to Meta Ads and Klaviyo; built a design system, landing pages and the blog in Claude Design. Numbers on the page come from Homefans' booking export, Sep–Oct 2026 vs Sep–Oct 2025, cancelled/refunded excluded: revenue +34%, bookings +15%, AOV +17%, coupon share 44% → 16%, cities with bookings 28 → 51, Rio share 50% → 34%. Brand search 9× return is one week (2–8 Nov 2026). Shown as percentages only, never euro totals.
 - 10+ years in marketing; engagements: Grow by Mia 18 months, Katalysta 12 months, Vitesse Running 12 months, GeeGee 5 months; social content for AhoyConnect.
 - LinkedIn: linkedin.com/in/kristina-gaitanova. CV: `assets/Kristina_Gaytandzhieva_CV_2026.pdf`.
 
