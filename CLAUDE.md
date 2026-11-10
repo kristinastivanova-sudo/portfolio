@@ -10,11 +10,11 @@ Kristina's personal portfolio: a senior growth marketer with hands-on UX trainin
 - Origin: designed in a Claude Design canvas ("Portfolio Redesign"), then exported to these static pages. **The HTML in this repo is now the source of truth.** The export tool is not kept; edits made here do not flow back to the canvas.
 
 ## Structure
-- `index.html`: homepage. Sections by id: `#top` (hero; the portrait is hidden on mobile), `#work` (marketing case-study cards), `#ai` ("AI-built": Homefans and Drops of Emotions cards, sand background), `#services`, `#design` (UX case-study cards). Footer has the CV download and LinkedIn.
+- `index.html`: homepage. Sections by id: `#top` (hero; the portrait is hidden on mobile), `#work` (marketing case-study cards), `#services`, `#design` (UX case-study cards), `#ai` ("AI-built" showcase near the bottom: Homefans and Drops of Emotions side by side, sand background; these two also keep their normal cards in `#work` and `#design`, each with a purple "Built with Claude" chip). Footer has the CV download and LinkedIn.
 - Navigation: desktop "Work" dropdown (`.nav-dd-menu`) with Marketing → `index.html#work`, AI-built → `index.html#ai` and Design → `index.html#design`; on mobile a `<details class="nav-mobile">` burger menu with the same links as sub-items. Keep both in sync when adding nav items.
-- AI-built case studies (cards in `#ai`): `homefans.html` (current role), `drops-of-emotions.html` (live shop).
-- Marketing case studies: `grow-by-mia.html`, `katalysta.html`, `vitesse-running.html`, `geegee.html`, `ahoy-connect.html`.
-- UX case studies: `learnify.html`, `mymultisport.html` (`drops-of-emotions.html` moved to `#ai`; the next-project chain is unchanged).
+- Marketing case studies: `homefans.html` (current role, first card, also in `#ai`), `grow-by-mia.html`, `katalysta.html`, `vitesse-running.html`, `geegee.html`, `ahoy-connect.html`.
+- UX case studies: `learnify.html`, `drops-of-emotions.html` (also in `#ai`), `mymultisport.html`.
+- Table of contents: the long case studies (`homefans`, `learnify`, `drops-of-emotions`, `mymultisport`) have a sticky "On this page" pill bar (`<nav class="toc">`) right after the hero. It sticks under the header (top 81px desktop, 83px mobile), scrolls sideways on mobile, and a small script highlights the current section. Each linked `<section>` has an `id`. When adding or renaming a section on these pages, update the bar's links too. Other case studies are short enough without one.
 - `prototypes/`: clickable prototypes linked from the UX case studies (`learnify/`, `learnify-desktop/`, `drops/`).
 - `assets/`: images (webp/jpg/png, already compressed) and `Kristina_Gaytandzhieva_CV_2026.pdf`. To update the CV, replace the PDF and keep the file name.
 - `404.html`, `favicon.svg`.
