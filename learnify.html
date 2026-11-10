@@ -46,16 +46,27 @@ section[id]{scroll-margin-top:84px}
 }
 </style>
 <style>
-.toc{position:sticky;top:81px;z-index:9;margin-bottom:48px;background:rgba(255,253,250,0.95);backdrop-filter:blur(8px);border-bottom:1px solid #E9E2D6}
-.toc-in{max-width:1200px;margin:0 auto;padding:8px 24px;display:flex;gap:4px;align-items:center;overflow-x:auto;scrollbar-width:none}
-.toc-in::-webkit-scrollbar{display:none}
-.toc-label{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#5C5762;white-space:nowrap;margin-right:10px}
-.toc a{white-space:nowrap;text-decoration:none;color:#5C5762;font-size:15px;font-weight:500;padding:8px 12px;border-radius:999px;min-height:36px;box-sizing:border-box;display:inline-flex;align-items:center;flex:0 0 auto}
-.toc a:hover{color:#040005;background:#F5EFE6}
-.toc a.on{background:#300045;color:#FFFDFA}
-section[id]{scroll-margin-top:140px}
+.toc{position:sticky;top:81px;z-index:9;margin-bottom:48px;background:#F5EFE6;border-bottom:1px solid #E9E2D6;box-shadow:0 8px 20px rgba(48,0,69,0.07)}
+.toc-in{max-width:1200px;margin:0 auto;padding:10px 24px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.toc-label{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#300045;white-space:nowrap;margin-right:6px}
+.toc a{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;text-decoration:none;color:#2A2530;font-size:15px;font-weight:600;padding:6px 14px 6px 6px;border-radius:999px;min-height:40px;box-sizing:border-box;background:#FFFDFA;border:1px solid #E9E2D6;transition:background .15s,border-color .15s}
+.toc a:hover{border-color:#300045}
+.toc-n{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:#F5EFE6;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#5C5762}
+.toc a.done .toc-n{background:#FFC94C;color:#040005}
+.toc a.on{background:#300045;border-color:#300045;color:#FFFDFA}
+.toc a.on .toc-n{background:#FFC94C;color:#040005}
+.toc-prog{height:3px}.toc-prog span{display:block;height:100%;width:0;background:#FFC94C}
+.toc-m{display:none}
+.toc-m summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:10px 16px;min-height:52px;box-sizing:border-box}
+.toc-m summary::-webkit-details-marker{display:none}
+.toc-cur{flex:1 1 auto;min-width:0;font-weight:700;font-size:16px;color:#040005;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.toc-count{font-size:14px;color:#5C5762;white-space:nowrap}
+.toc-m summary svg{flex:0 0 auto;transition:transform .2s}
+.toc-m[open] summary svg{transform:rotate(180deg)}
+.toc-list{display:flex;flex-direction:column;gap:6px;padding:0 16px 14px;max-height:60vh;overflow:auto}
+section[id]{scroll-margin-top:150px}
+@media (max-width:900px){.toc-in{display:none}.toc-m{display:block}section[id]{scroll-margin-top:150px}}
 @media (max-width:760px){.toc{top:83px}}
-@media (max-width:640px){.toc-label{display:none}.toc-in{padding:8px 16px}}
 </style>
 </head>
 <body>
@@ -104,7 +115,7 @@ section[id]{scroll-margin-top:140px}
 <p style="margin: 0; font-size: 21px; line-height: 1.5; color: #5C5762; max-width: 780px">An end-to-end UX case study on why adults drop out of self-paced courses. I designed the first version, then went back, critiqued it, and redesigned the whole flow for mobile and desktop, with a clickable prototype.</p>
 </section>
 
-<nav class="toc" aria-label="On this page"><div class="toc-in"><span class="toc-label">On this page</span><a href="#problem">Problem</a><a href="#personas">Personas</a><a href="#flows">User flows</a><a href="#v1">Version 1</a><a href="#critique">Critique</a><a href="#v2">Version 2</a><a href="#prototype">Prototype</a><a href="#desktop">Desktop</a><a href="#next">Next steps</a></div></nav>
+<nav class="toc" aria-label="On this page"><div class="toc-in"><span class="toc-label">On this page</span><a href="#problem"><span class="toc-n">1</span>Problem</a><a href="#personas"><span class="toc-n">2</span>Personas</a><a href="#flows"><span class="toc-n">3</span>User flows</a><a href="#v1"><span class="toc-n">4</span>Version 1</a><a href="#v2"><span class="toc-n">5</span>Version 2</a><a href="#prototype"><span class="toc-n">6</span>Prototype</a><a href="#desktop"><span class="toc-n">7</span>Desktop</a><a href="#next"><span class="toc-n">8</span>Next steps</a></div><details class="toc-m"><summary><span class="toc-label">On this page</span><span class="toc-cur">Jump to a section</span><span class="toc-count">8 sections</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#300045" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="toc-list"><a href="#problem"><span class="toc-n">1</span>Problem</a><a href="#personas"><span class="toc-n">2</span>Personas</a><a href="#flows"><span class="toc-n">3</span>User flows</a><a href="#v1"><span class="toc-n">4</span>Version 1</a><a href="#v2"><span class="toc-n">5</span>Version 2</a><a href="#prototype"><span class="toc-n">6</span>Prototype</a><a href="#desktop"><span class="toc-n">7</span>Desktop</a><a href="#next"><span class="toc-n">8</span>Next steps</a></div></details><div class="toc-prog" aria-hidden="true"><span></span></div></nav>
 
 <section aria-label="Project snapshot" style="max-width: 1200px; margin: 0 auto; padding: 0 24px 56px">
 <div style="background: #F5EFE6; border: 1px solid #E9E2D6; border-radius: 24px; padding: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 28px">
@@ -245,31 +256,10 @@ section[id]{scroll-margin-top:140px}
 </div>
 </section>
 
-<section id="critique" aria-label="Critique of version 1" style="background: #300045; color: #FFFDFA">
-<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; gap: 28px">
-<div style="display: flex; flex-direction: column; gap: 10px">
-<div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #FFC94C">Looking back at v1</div>
-<h2 style="margin: 0; font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: clamp(30px, 3vw, 40px); line-height: 1.1; letter-spacing: -0.025em">Three things I'd fix</h2>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px">
-<div style="background: rgba(255,253,250,0.07); border: 1px solid rgba(255,253,250,0.14); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 8px">
-<div style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 14px; color: #FFC94C">01</div>
-<div style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.25">Choices hidden in dropdowns</div>
-<div style="font-size: 15px; line-height: 1.5; color: rgba(255,253,250,0.8)">Field, level and pace sat in closed menus. v2 shows them as chips and one hours control.</div>
-</div><div style="background: rgba(255,253,250,0.07); border: 1px solid rgba(255,253,250,0.14); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 8px">
-<div style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 14px; color: #FFC94C">02</div>
-<div style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.25">Mentor support with “fees may apply”</div>
-<div style="font-size: 15px; line-height: 1.5; color: rgba(255,253,250,0.8)">No price or frequency. v2 asks at review: none, every 2 weeks or weekly, $25 per call.</div>
-</div><div style="background: rgba(255,253,250,0.07); border: 1px solid rgba(255,253,250,0.14); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 8px">
-<div style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 14px; color: #FFC94C">03</div>
-<div style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.25">Totals that didn’t add up</div>
-<div style="font-size: 15px; line-height: 1.5; color: rgba(255,253,250,0.8)">Review showed $168 and 34 h instead of $158 and 32 h. v2 itemizes every line.</div>
-</div>
-<div style="background: #FFC94C; color: #040005; border-radius: 18px; padding: 22px; display: flex; flex-direction: column; justify-content: center; gap: 6px">
-<div style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 40px; line-height: 1; letter-spacing: -0.03em">4 → 3</div>
-<div style="font-size: 15px; line-height: 1.45; font-weight: 600">Steps to build a course, with price and finish date at every step</div>
-</div>
-</div>
+<section aria-label="What I'd fix in version 1" style="max-width: 1200px; margin: 0 auto; padding: 56px 24px">
+<div style="border: 1px solid #E9E2D6; border-radius: 20px; padding: 24px 28px; background: #FFFDFA; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 24px"><div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5C5762">Looking back at v1 · what I'd fix</div><div style="font-size: 15px; color: #5C5762"><strong style="font-family: 'Schibsted Grotesk', sans-serif; font-size: 20px; color: #300045">4 → 3</strong> steps to build a course, with price and finish date at every step</div></div>
+<ol style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px 32px"><li style="display: flex; gap: 12px; align-items: flex-start"><span style="flex: 0 0 auto; font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 13px; color: #5C5762; padding-top: 3px">01</span><div style="display: flex; flex-direction: column; gap: 4px"><strong style="font-size: 16px; line-height: 1.35; color: #040005">Choices hidden in dropdowns</strong><span style="font-size: 15px; line-height: 1.5; color: #5C5762">Field, level and pace sat in closed menus. v2 shows them as chips and one hours control.</span></div></li><li style="display: flex; gap: 12px; align-items: flex-start"><span style="flex: 0 0 auto; font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 13px; color: #5C5762; padding-top: 3px">02</span><div style="display: flex; flex-direction: column; gap: 4px"><strong style="font-size: 16px; line-height: 1.35; color: #040005">Mentor support with “fees may apply”</strong><span style="font-size: 15px; line-height: 1.5; color: #5C5762">No price or frequency. v2 asks at review: none, every 2 weeks or weekly, $25 per call.</span></div></li><li style="display: flex; gap: 12px; align-items: flex-start"><span style="flex: 0 0 auto; font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 13px; color: #5C5762; padding-top: 3px">03</span><div style="display: flex; flex-direction: column; gap: 4px"><strong style="font-size: 16px; line-height: 1.35; color: #040005">Totals that didn’t add up</strong><span style="font-size: 15px; line-height: 1.5; color: #5C5762">Review showed $168 and 34 h instead of $158 and 32 h. v2 itemizes every line.</span></div></li></ol>
 </div>
 </section>
 
@@ -446,6 +436,6 @@ section[id]{scroll-margin-top:140px}
 
 <script>document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.nav-mobile-panel a');if(a){var d=a.closest('details');if(d)d.open=false}});</script>
 
-<script>(function(){var l=[].slice.call(document.querySelectorAll('.toc a'));var m={};l.forEach(function(a){m[a.getAttribute('href').slice(1)]=a});if(!('IntersectionObserver' in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;l.forEach(function(a){a.classList.remove('on')});var a=m[e.target.id];if(a){a.classList.add('on');var p=a.parentNode;p.scrollTo({left:a.offsetLeft-p.clientWidth/2+a.offsetWidth/2,behavior:'smooth'})}})},{rootMargin:'-150px 0px -55% 0px'});Object.keys(m).forEach(function(id){var s=document.getElementById(id);if(s)io.observe(s)})})();</script>
+<script>(function(){var nav=document.querySelector('.toc');if(!nav)return;var links=[].slice.call(nav.querySelectorAll('.toc-in a'));var mlinks=[].slice.call(nav.querySelectorAll('.toc-list a'));var ids=links.map(function(a){return a.getAttribute('href').slice(1)});var secs=ids.map(function(id){return document.getElementById(id)});var cur=nav.querySelector('.toc-cur'),cnt=nav.querySelector('.toc-count'),bar=nav.querySelector('.toc-prog span'),det=nav.querySelector('.toc-m');var last=-2;function upd(){var y=nav.getBoundingClientRect().bottom+24,idx=-1;secs.forEach(function(s,i){if(s&&s.getBoundingClientRect().top<=y)idx=i});var h=document.documentElement.scrollHeight-innerHeight;if(bar)bar.style.width=(h>0?Math.min(100,scrollY/h*100):0)+'%';if(idx===last)return;last=idx;[links,mlinks].forEach(function(L){L.forEach(function(a,i){a.classList.toggle('on',i===idx);a.classList.toggle('done',i<idx)})});if(cur)cur.textContent=idx<0?'Jump to a section':links[idx].textContent.replace(/^\d+/,'');if(cnt)cnt.textContent=idx<0?ids.length+' sections':(idx+1)+' of '+ids.length;var a=links[idx];}window.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);mlinks.forEach(function(a){a.addEventListener('click',function(){if(det)det.open=false})});upd()})();</script>
 </body>
 </html>
