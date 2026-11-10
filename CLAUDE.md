@@ -38,6 +38,7 @@ Fonts: **Bricolage Grotesque** (headings) + **Figtree** (text), from Google Font
 
 ## Facts that appear on the site
 - Homefans (since Aug 2026): leads the social media and PPC teams; owns Meta Ads and email (Klaviyo); works with host onboarding (supply), sales and devs; runs the team on monday.com; Claude connected to Meta Ads and Klaviyo; built a design system, landing pages and the blog in Claude Design. Numbers on the page come from Homefans' booking export, Sep–Oct 2026 vs Sep–Oct 2025, cancelled/refunded excluded: revenue +34%, bookings +15%, AOV +17%, coupon share 44% → 16%, cities with bookings 28 → 51, Rio share 50% → 34%. Brand search 9× return is one week (2–8 Nov 2026). Shown as percentages only, never euro totals.
+- Drops of Emotions: v1 and v2 designed in Figma, then redesigned in Claude Design and built by Kristina with Claude on Cloudflare (replaced Shopify): custom checkout with Stripe Checkout, Speedy courier API, custom admin. Live at https://dropsofemotions.bg (linked from the case study hero and the "Version 3 · live" section). Waiting on a screenshot of the live site.
 - 10+ years in marketing; engagements: Grow by Mia 18 months, Katalysta 12 months, Vitesse Running 12 months, GeeGee 5 months; social content for AhoyConnect.
 - LinkedIn: linkedin.com/in/kristina-gaitanova. CV: `assets/Kristina_Gaytandzhieva_CV_2026.pdf`.
 
