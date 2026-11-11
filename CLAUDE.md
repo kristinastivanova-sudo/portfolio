@@ -3,7 +3,7 @@
 Read this first in any new session. It is the handover between chats.
 
 ## What this is
-Kristina's personal portfolio: a senior growth marketer with hands-on UX training. Plain static HTML: no build step, no dependencies, no framework. Since Nov 2026 the hero is: H1 "AI-first growth marketing" with a smaller, italic, regular-weight line "and a designer's touch" under it (a `<span>` inside the h1, Figtree); subtitle "I'm Kristina, a growth marketing manager with 10+ years…"; the two buttons; then a plain text link "AI-built work: … →" to `#ai` (no label or border; underlines on hover). Secondary buttons (`.btn-ghost`) get a light sand fill on hover, not a black one. No eyebrow pill and no "Worked with" company list any more.
+Kristina's personal portfolio: a senior growth marketer with hands-on UX training. Plain static HTML: no build step, no dependencies, no framework. Since Nov 2026 the hero is: H1 "AI-first growth marketing" with a smaller, italic, regular-weight line "with a designer's touch" under it (a `<span>` inside the h1, Figtree); subtitle "I'm Kristina, a growth marketing manager with 10+ years…"; the two buttons; then a plain text link "AI-built work: … →" to `#ai` (no label or border; underlines on hover). Secondary buttons (`.btn-ghost`) get a light sand fill on hover, not a black one. No eyebrow pill and no "Worked with" company list any more.
 
 - Repo: `kristinastivanova-sudo/portfolio`. Hosted on **Vercel** (Hobby, free), connected to this repo: every push to `main` redeploys automatically in under a minute. Kristina decided to keep it on Vercel (moving to Cloudflare is possible later if it becomes commercial or she wants one dashboard with the shop).
 - `vercel.json` sets clean URLs: `/geegee` serves `geegee.html`.
