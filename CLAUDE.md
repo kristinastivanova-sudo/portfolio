@@ -51,5 +51,6 @@ Fonts: **Schibsted Grotesk** (headings, weights 500–800; replaced Bricolage Gr
 ## How to work on it
 1. `git clone`, then serve locally: `python3 -m http.server 8080` in the repo folder (open `/index.html`; clean URLs only work on Vercel).
 2. Check every changed page with Playwright at 1440 and 390 wide: no sideways scroll (`document.documentElement.scrollWidth` equals the viewport), images load, mobile menu opens.
-3. Check links: `grep -o 'href="[^"#]*\.html"' *.html` and make sure every target exists.
-4. Commit and push to `main`; Vercel deploys. Tell Kristina what changed.
+3. Captions under screenshots: a framed screenshot with a shadow needs at least 24px before its caption (the figure's `gap: 24px`), plain images at least 14px; otherwise the caption sits inside the shadow.
+4. Check links: `grep -o 'href="[^"#]*\.html"' *.html` and make sure every target exists.
+5. Commit and push to `main`; Vercel deploys. Tell Kristina what changed.
