@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GeeGee — Kristina Gaytandzhieva</title>
+<meta name="description" content="Kristina Gaytandzhieva — growth marketing and product design portfolio.">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&amp;family=Figtree:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FFFDFA}
+a{color:#040005}a:hover{color:#300045}
+.btn-primary:hover{filter:brightness(0.94);box-shadow:0 6px 18px rgba(230,176,63,0.35)}
+.navlink:hover{color:#040005}
+.next:hover{box-shadow:0 12px 32px rgba(48,0,69,0.10)}
+ul.list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
+@media (max-width:640px){.navlink{display:none !important}}
+/* nav */
+section[id]{scroll-margin-top:84px}
+.nav-dd-menu{opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity 160ms ease,transform 160ms ease,visibility 160ms}
+.nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{opacity:1;visibility:visible;transform:none}
+.nav-dd:hover .nav-dd-trigger{color:#040005 !important}
+.nav-dd-item:hover{background:#F5EFE6}
+.nav-mobile{display:none}
+.nav-mobile summary{list-style:none;cursor:pointer}
+.nav-mobile summary::-webkit-details-marker{display:none}
+.nav-mobile .ic-close{display:none}
+.nav-mobile[open] .ic-close{display:block}
+.nav-mobile[open] .ic-open{display:none}
+.nav-m-link:hover{color:#300045 !important}
+@media (max-width:760px){.nav-desktop{display:none !important}.nav-mobile{display:block}}
+</style>
+
+<style>html{-webkit-text-size-adjust:100%}img{max-width:100%}</style>
+<style>html,body{overflow-x:clip}
+@media (max-width:720px){
+  [style*="repeat(auto-fit, minmax("],
+  [style*="grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr)"],
+  [style*="grid-template-columns: minmax(0, 1fr) minmax(0, 1fr)"],
+  [style*="grid-template-columns: minmax(0, 2fr) minmax(0, 1fr)"]{grid-template-columns:minmax(0,1fr) !important}
+  figure,figure *{max-width:100%;box-sizing:border-box}
+}
+</style>
+</head>
+<body>
+<div id="root">
+
+<div style="font-family: Figtree, system-ui, sans-serif; color: #040005; background: #FFFDFA; width: 100%">
+
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(255,253,250,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid #E9E2D6">
+<nav aria-label="Main" style="max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; position: relative">
+<a href="/" style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 22px; text-decoration: none; color: #040005; letter-spacing: -0.02em">Kristina G.</a>
+<div class="nav-desktop" style="display: flex; align-items: center; gap: 28px; font-size: 16px; font-weight: 500">
+<div class="nav-dd" style="position: relative">
+<a class="navlink nav-dd-trigger" href="/#work" aria-haspopup="true" style="color: #5C5762; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; padding: 12px 0">Work<svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></a>
+<div class="nav-dd-menu" style="position: absolute; top: 100%; left: -14px; min-width: 250px; background: #FFFDFA; border: 1px solid #E9E2D6; border-radius: 16px; box-shadow: 0 16px 40px rgba(48,0,69,0.12); padding: 8px; display: flex; flex-direction: column; gap: 2px; z-index: 20">
+<a class="nav-dd-item" href="/#work" style="text-decoration: none; color: #040005; padding: 12px 14px; border-radius: 10px; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 600">Marketing</span><span style="font-size: 14px; color: #5C5762">Growth case studies</span></a>
+<a class="nav-dd-item" href="/#ai" style="text-decoration: none; color: #040005; padding: 12px 14px; border-radius: 10px; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 600">AI-built</span><span style="font-size: 14px; color: #5C5762">Marketing &amp; products built with Claude</span></a>
+<a class="nav-dd-item" href="/#design" style="text-decoration: none; color: #040005; padding: 12px 14px; border-radius: 10px; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 600">Design</span><span style="font-size: 14px; color: #5C5762">Product &amp; UX case studies</span></a>
+</div>
+</div>
+<a class="navlink" href="/#ai-stack" style="color: #5C5762; text-decoration: none">AI workflow</a>
+<a class="navlink" href="/#services" style="color: #5C5762; text-decoration: none">What I do</a>
+<a class="navlink" href="#resume" style="color: #5C5762; text-decoration: none">Resume</a>
+<a class="btn-primary" href="#contact" style="background: #FFC94C; color: #040005; text-decoration: none; padding: 12px 20px; border-radius: 12px; font-weight: 600; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Get in touch</a>
+</div>
+<details class="nav-mobile">
+<summary aria-label="Menu" style="width: 44px; height: 44px; border-radius: 12px; border: 1.5px solid #E9E2D6; display: flex; align-items: center; justify-content: center; color: #040005"><svg class="ic-open" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><svg class="ic-close" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></summary>
+<div class="nav-mobile-panel" style="position: absolute; left: 0; right: 0; top: 100%; background: #FFFDFA; border-bottom: 1px solid #E9E2D6; box-shadow: 0 16px 32px rgba(48,0,69,0.10); padding: 8px 24px 24px; display: flex; flex-direction: column; font-size: 18px; font-weight: 600">
+<a class="nav-m-link" href="/#work" style="color: #040005; text-decoration: none; padding: 14px 0 6px">Work</a>
+<a class="nav-m-link" href="/#work" style="color: #5C5762; text-decoration: none; padding: 10px 0 10px 16px; border-left: 2px solid #E9E2D6; font-weight: 500; font-size: 17px">Marketing</a>
+<a class="nav-m-link" href="/#ai" style="color: #5C5762; text-decoration: none; padding: 10px 0 10px 16px; border-left: 2px solid #E9E2D6; font-weight: 500; font-size: 17px">AI-built</a>
+<a class="nav-m-link" href="/#design" style="color: #5C5762; text-decoration: none; padding: 10px 0 10px 16px; border-left: 2px solid #E9E2D6; font-weight: 500; font-size: 17px">Design</a>
+<a class="nav-m-link" href="/#ai-stack" style="color: #040005; text-decoration: none; padding: 14px 0; border-top: 1px solid #F0EBE3; margin-top: 8px">AI workflow</a>
+<a class="nav-m-link" href="/#services" style="color: #040005; text-decoration: none; padding: 14px 0; border-top: 1px solid #F0EBE3">What I do</a>
+<a class="nav-m-link" href="#resume" style="color: #040005; text-decoration: none; padding: 14px 0; border-top: 1px solid #F0EBE3">Resume</a>
+<a class="btn-primary" href="#contact" style="background: #FFC94C; color: #040005; text-decoration: none; padding: 12px 20px; border-radius: 12px; font-weight: 600; min-height: 44px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; margin-top: 12px">Get in touch</a>
+</div>
+</details>
+</nav>
+</header>
+
+<section style="max-width: 1200px; margin: 0 auto; padding: 64px 24px 48px; display: flex; flex-direction: column; gap: 28px">
+<a href="/" style="font-size: 15px; font-weight: 600; color: #5C5762; text-decoration: none">← All case studies</a>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
+<span style="background: #FFC94C; color: #040005; font-size: 14px; font-weight: 700; padding: 6px 12px; border-radius: 999px">Launch &amp; paid growth</span>
+<span style="font-size: 15px; color: #5C5762; font-weight: 500">GeeGee · Social sports app · NZ, AU &amp; UK</span>
+</div>
+<h1 style="margin: 0; font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: clamp(34px, 4vw, 52px); line-height: 1.08; letter-spacing: -0.025em; max-width: 960px">Growing a social sports app 6× in five months</h1>
+<p style="margin: 0; font-size: clamp(18px, 1.6vw, 20px); line-height: 1.5; color: #5C5762; max-width: 780px">Research, positioning and paid acquisition for a Gen Z MicroSports app. After defining who it was for and what to say, I ran install campaigns across five channels over five months, cutting the cost of an install by 77% along the way.</p>
+</section>
+
+<section aria-label="Project snapshot" style="max-width: 1200px; margin: 0 auto; padding: 0 24px 56px">
+<div style="background: #F5EFE6; border: 1px solid #E9E2D6; border-radius: 24px; padding: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 6px"><div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5C5762">Role</div><div style="font-size: 17px; font-weight: 600; line-height: 1.45">Research, positioning &amp; paid acquisition</div></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5C5762">Timeline</div><div style="font-size: 17px; font-weight: 600; line-height: 1.45">5 months</div></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5C5762">Markets</div><div style="font-size: 17px; font-weight: 600; line-height: 1.45">New Zealand · Australia · UK · EU</div></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5C5762">Channels</div><div style="font-size: 17px; font-weight: 600; line-height: 1.45">TikTok · Snapchat · Meta · Apple Search Ads · Google Ads</div></div>
+</div>
+</section>
+
+<section aria-label="Results" style="background: #300045; color: #FFFDFA">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 12px"><div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5C5762; color: rgba(255,253,250,0.72)">Results</div><h2 style="margin: 0; font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: clamp(28px, 2.8vw, 36px); line-height: 1.1; letter-spacing: -0.025em">A clear audience, and a repeatable way to reach it</h2></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 1px solid rgba(255,253,250,0.18)"><div style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 52px; line-height: 1; letter-spacing: -0.03em; color: #FFC94C">−77%</div><div style="font-size: 17px; line-height: 1.5; color: rgba(255,253,250,0.85)">cost per install, June to July (NZ$61 → NZ$14)</div></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 1px solid rgba(255,253,250,0.18)"><div style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 52px; line-height: 1; letter-spacing: -0.03em; color: #FFC94C">3,133</div><div style="font-size: 17px; line-height: 1.5; color: rgba(255,253,250,0.85)">monthly active users in August, up from 525 in April</div></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 1px solid rgba(255,253,250,0.18)"><div style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 52px; line-height: 1; letter-spacing: -0.03em; color: #FFC94C">NZ$18.54</div><div style="font-size: 17px; line-height: 1.5; color: rgba(255,253,250,0.85)">blended cost per install across NZ$23.5K of spend</div></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 1px solid rgba(255,253,250,0.18)"><div style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 52px; line-height: 1; letter-spacing: -0.03em; color: #FFC94C">22×</div><div style="font-size: 17px; line-height: 1.5; color: rgba(255,253,250,0.85)">more paid installs in August than in April</div></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 1px solid rgba(255,253,250,0.18)"><div style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 52px; line-height: 1; letter-spacing: -0.03em; color: #FFC94C">~50</div><div style="font-size: 17px; line-height: 1.5; color: rgba(255,253,250,0.85)">survey responses that shaped the personas</div></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px">
+<div style="background: rgba(255,253,250,0.07); border: 1px solid rgba(255,253,250,0.14); border-radius: 16px; padding: 22px; font-size: 17px; line-height: 1.5">Copy and positioning adopted for landing pages and app store previews</div>
+<div style="background: rgba(255,253,250,0.07); border: 1px solid rgba(255,253,250,0.14); border-radius: 16px; padding: 22px; font-size: 17px; line-height: 1.5">A weekly reporting rhythm across five ad platforms, so budget followed what worked</div>
+<div style="background: rgba(255,253,250,0.07); border: 1px solid rgba(255,253,250,0.14); border-radius: 16px; padding: 22px; font-size: 17px; line-height: 1.5">Research that shaped the roadmap: gamified progression, featured challenges, social badges</div>
+</div>
+</div>
+</section>
+
+<section style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-wrap: wrap; gap: 48px">
+<div style="flex: 1 1 260px; min-width: 0"><h2 style="margin: 0; font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: clamp(24px, 2.4vw, 30px); letter-spacing: -0.02em">The challenge</h2></div>
+<div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 18px; font-size: 18px; line-height: 1.6; color: #2A2530">
+<p style="margin: 0">GeeGee is a social mobile app for creating and playing MicroSports: short, fun physical challenges that people invent, perform and share with friends. The vision was to make sports more social, playful and Gen Z-friendly.</p>
+<p style="margin: 0">When I joined, the team lacked clarity on its users, its positioning and its content direction. Once the app was live, the job became finding those users at a cost a small startup could sustain, across three very different markets.</p>
+</div>
+</section>
+
+<section style="background: #F5EFE6">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 12px"><div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5C5762">What I did</div><h2 style="margin: 0; font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: clamp(28px, 2.8vw, 36px); line-height: 1.1; letter-spacing: -0.025em">From research to a growing audience</h2></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px">
+<div style="background: #FFFDFA; border: 1px solid #E9E2D6; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 10px"><div style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 15px; color: #5C5762">01</div><h3 style="margin: 0; font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.2">Research &amp; personas</h3><p style="margin: 0; font-size: 18px; line-height: 1.55; color: #5C5762">Surveyed ~50 users and ran 1:1 interviews, then defined three personas: a teen creator, a student athlete and a young professional who wants to stay active.</p></div>
+<div style="background: #FFFDFA; border: 1px solid #E9E2D6; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 10px"><div style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 15px; color: #5C5762">02</div><h3 style="margin: 0; font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.2">Positioning &amp; messaging</h3><p style="margin: 0; font-size: 18px; line-height: 1.55; color: #5C5762">“Create and challenge your world with MicroSports”, with separate copy for creators, players, spectators and partners.</p></div>
+<div style="background: #FFFDFA; border: 1px solid #E9E2D6; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 10px"><div style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 15px; color: #5C5762">03</div><h3 style="margin: 0; font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.2">Core loop &amp; onboarding</h3><p style="margin: 0; font-size: 18px; line-height: 1.55; color: #5C5762">Mapped the watch → attempt → play → create loop and wrote onboarding, headline and CTA copy for each persona.</p></div>
+<div style="background: #300045; color: #FFFDFA; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 10px"><div style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 15px; color: #FFC94C">04</div><h3 style="margin: 0; font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.2">Paid acquisition</h3><p style="margin: 0; font-size: 18px; line-height: 1.55; color: rgba(255,253,250,0.85)">Ran install campaigns in NZ, AU and the UK, testing channels, sports (rugby vs soccer), platforms and audiences week by week.</p></div>
+</div>
+</div>
+</section>
+
+<section aria-label="Active users chart" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 680px"><div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5C5762">Growth</div><h2 style="margin: 0; font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: clamp(28px, 2.8vw, 36px); line-height: 1.1; letter-spacing: -0.025em">Monthly active users</h2><p style="margin: 0; font-size: 18px; line-height: 1.55; color: #5C5762">Growth sped up once paid campaigns found the right channels: about +45% a month in July and August, compared with +21% to +33% before.</p></div>
+<div style="display: flex; gap: 18px; font-size: 14px; color: #5C5762"><span style="display: flex; align-items: center; gap: 8px"><span aria-hidden="true" style="width: 14px; height: 14px; border-radius: 3px; background: #D9CFE0"></span>Before paid campaigns</span><span style="display: flex; align-items: center; gap: 8px"><span aria-hidden="true" style="width: 14px; height: 14px; border-radius: 3px; background: #300045"></span>Paid campaigns running</span></div>
+</div>
+<div role="img" aria-label="Monthly active users: Jan 182, Feb 240, Mar 357, Apr 525, May 663, Jun 965, Jul 1,751, Aug 3,133" style="background: #FFFFFF; border: 1px solid #E9E2D6; border-radius: 24px; padding: 32px 32px 20px; display: flex; flex-direction: column; gap: 0">
+<div style="display: flex; gap: 12px; height: 300px; align-items: flex-end">
+<div title="Jan: 182" style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 8px; height: 100%">
+<span style="font-size: 14px; font-weight: 700; color: #5C5762">182</span>
+<span style="position: relative; width: 100%; max-width: 56px; height: 15px; background: #D9CFE0; border-radius: 4px 4px 0 0"></span>
+</div>
+<div title="Feb: 240" style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 8px; height: 100%">
+<span style="font-size: 14px; font-weight: 700; color: #5C5762">240</span>
+<span style="position: relative; width: 100%; max-width: 56px; height: 20px; background: #D9CFE0; border-radius: 4px 4px 0 0"></span>
+</div>
+<div title="Mar: 357" style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 8px; height: 100%">
+<span style="font-size: 14px; font-weight: 700; color: #5C5762">357</span>
+<span style="position: relative; width: 100%; max-width: 56px; height: 30px; background: #D9CFE0; border-radius: 4px 4px 0 0"></span>
+</div>
+<div title="Apr: 525" style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 8px; height: 100%">
+<span style="font-size: 14px; font-weight: 700; color: #040005">525</span>
+<span style="position: relative; width: 100%; max-width: 56px; height: 44px; background: #300045; border-radius: 4px 4px 0 0"></span>
+</div>
+<div title="May: 663" style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 8px; height: 100%">
+<span style="font-size: 14px; font-weight: 700; color: #040005">663</span>
+<span style="position: relative; width: 100%; max-width: 56px; height: 55px; background: #300045; border-radius: 4px 4px 0 0"></span>
+</div>
+<div title="Jun: 965" style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 8px; height: 100%">
+<span style="font-size: 14px; font-weight: 700; color: #040005">965</span>
+<span style="position: relative; width: 100%; max-width: 56px; height: 80px; background: #300045; border-radius: 4px 4px 0 0"></span>
+</div>
+<div title="Jul: 1,751" style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 8px; height: 100%">
+<span style="font-size: 14px; font-weight: 700; color: #040005">1,751</span>
+<span style="position: relative; width: 100%; max-width: 56px; height: 145px; background: #300045; border-radius: 4px 4px 0 0"></span>
+</div>
+<div title="Aug: 3,133" style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 8px; height: 100%">
+<span style="font-size: 14px; font-weight: 700; color: #040005">3,133</span>
+<span style="position: relative; width: 100%; max-width: 56px; height: 260px; background: #300045; border-radius: 4px 4px 0 0"></span>
+</div>
+</div>
+<div style="display: flex; gap: 12px; border-top: 1px solid #CFC6B8; padding-top: 10px"><span style="flex: 1 1 0; text-align: center; font-size: 14px; color: #5C5762">Jan</span><span style="flex: 1 1 0; text-align: center; font-size: 14px; color: #5C5762">Feb</span><span style="flex: 1 1 0; text-align: center; font-size: 14px; color: #5C5762">Mar</span><span style="flex: 1 1 0; text-align: center; font-size: 14px; color: #5C5762">Apr</span><span style="flex: 1 1 0; text-align: center; font-size: 14px; color: #5C5762">May</span><span style="flex: 1 1 0; text-align: center; font-size: 14px; color: #5C5762">Jun</span><span style="flex: 1 1 0; text-align: center; font-size: 14px; color: #5C5762">Jul</span><span style="flex: 1 1 0; text-align: center; font-size: 14px; color: #5C5762">Aug</span></div>
+</div>
+</section>
+
+<section style="background: #F5EFE6">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 760px"><div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5C5762">Paid acquisition</div><h2 style="margin: 0; font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: clamp(28px, 2.8vw, 36px); line-height: 1.1; letter-spacing: -0.025em">More installs for less: what changed in July</h2></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 24px">
+<figure role="img" aria-label="Paid installs per month: Apr 29, May 3, Jun 59, Jul 514, Aug 661" style="margin: 0; background: #FFFFFF; border: 1px solid #E9E2D6; border-radius: 24px; padding: 28px 28px 20px; display: flex; flex-direction: column; gap: 18px">
+<figcaption style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 21px">Paid installs per month</figcaption>
+<div><div style="display: flex; gap: 12px; height: 250px; align-items: flex-end"><div title="Apr: 29" style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 8px; height: 100%">
+<span style="font-size: 14px; font-weight: 700; color: #5C5762">29</span>
+<span style="position: relative; width: 100%; max-width: 56px; height: 9px; background: #D9CFE0; border-radius: 4px 4px 0 0"></span>
+</div>
+<div title="May: 3" style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 8px; height: 100%">
+<span style="font-size: 14px; font-weight: 700; color: #5C5762">3</span>
+<span style="position: relative; width: 100%; max-width: 56px; height: 3px; background: #D9CFE0; border-radius: 4px 4px 0 0"></span>
+</div>
+<div title="Jun: 59" style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 8px; height: 100%">
+<span style="font-size: 14px; font-weight: 700; color: #5C5762">59</span>
+<span style="position: relative; width: 100%; max-width: 56px; height: 19px; background: #D9CFE0; border-radius: 4px 4px 0 0"></span>
+</div>
+<div title="Jul: 514" style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 8px; height: 100%">
+<span style="font-size: 14px; font-weight: 700; color: #040005">514</span>
+<span style="position: relative; width: 100%; max-width: 56px; height: 163px; background: #300045; border-radius: 4px 4px 0 0"></span>
+</div>
+<div title="Aug: 661" style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 8px; height: 100%">
+<span style="font-size: 14px; font-weight: 700; color: #040005">661</span>
+<span style="position: relative; width: 100%; max-width: 56px; height: 210px; background: #300045; border-radius: 4px 4px 0 0"></span>
+</div></div><div style="display: flex; gap: 12px; border-top: 1px solid #CFC6B8; padding-top: 10px"><span style="flex: 1 1 0; text-align: center; font-size: 14px; color: #5C5762">Apr</span><span style="flex: 1 1 0; text-align: center; font-size: 14px; color: #5C5762">May</span><span style="flex: 1 1 0; text-align: center; font-size: 14px; color: #5C5762">Jun</span><span style="flex: 1 1 0; text-align: center; font-size: 14px; color: #5C5762">Jul</span><span style="flex: 1 1 0; text-align: center; font-size: 14px; color: #5C5762">Aug</span></div></div>
+</figure>
+<figure role="img" aria-label="Cost per install, NZD: Apr 20.00, May 498.14, Jun 61.17, Jul 14.34, Aug 15.76" style="margin: 0; background: #FFFFFF; border: 1px solid #E9E2D6; border-radius: 24px; padding: 28px 28px 20px; display: flex; flex-direction: column; gap: 18px">
+<figcaption style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 21px">Cost per install (NZ$)</figcaption>
+<div><div style="display: flex; gap: 12px; height: 250px; align-items: flex-end"><div title="Apr: $20" style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 8px; height: 100%">
+<span style="font-size: 14px; font-weight: 700; color: #5C5762">$20</span>
+<span style="position: relative; width: 100%; max-width: 56px; height: 60px; background: #D9CFE0; border-radius: 4px 4px 0 0"></span>
+</div>
+<div title="May: $498" style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 8px; height: 100%">
+<span style="font-size: 14px; font-weight: 700; color: #5C5762">$498</span>
+<span style="position: relative; width: 100%; max-width: 56px; height: 210px; background: #D9CFE0; border-radius: 4px 4px 0 0"><span aria-hidden="true" style="position:absolute;left:-4px;right:-4px;top:18px;height:6px;background:#FFFDFA;transform:skewY(-8deg)"></span></span>
+</div>
+<div title="Jun: $61" style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 8px; height: 100%">
+<span style="font-size: 14px; font-weight: 700; color: #5C5762">$61</span>
+<span style="position: relative; width: 100%; max-width: 56px; height: 184px; background: #D9CFE0; border-radius: 4px 4px 0 0"></span>
+</div>
+<div title="Jul: $14" style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 8px; height: 100%">
+<span style="font-size: 14px; font-weight: 700; color: #040005">$14</span>
+<span style="position: relative; width: 100%; max-width: 56px; height: 43px; background: #300045; border-radius: 4px 4px 0 0"></span>
+</div>
+<div title="Aug: $16" style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 8px; height: 100%">
+<span style="font-size: 14px; font-weight: 700; color: #040005">$16</span>
+<span style="position: relative; width: 100%; max-width: 56px; height: 47px; background: #300045; border-radius: 4px 4px 0 0"></span>
+</div></div><div style="display: flex; gap: 12px; border-top: 1px solid #CFC6B8; padding-top: 10px"><span style="flex: 1 1 0; text-align: center; font-size: 14px; color: #5C5762">Apr</span><span style="flex: 1 1 0; text-align: center; font-size: 14px; color: #5C5762">May</span><span style="flex: 1 1 0; text-align: center; font-size: 14px; color: #5C5762">Jun</span><span style="flex: 1 1 0; text-align: center; font-size: 14px; color: #5C5762">Jul</span><span style="flex: 1 1 0; text-align: center; font-size: 14px; color: #5C5762">Aug</span></div></div>
+</figure>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px">
+<div style="background: #FFFDFA; border: 1px solid #E9E2D6; border-radius: 18px; padding: 24px; display: flex; flex-direction: column; gap: 10px"><div style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 15px; color: #5C5762">01</div><div style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 21px; line-height: 1.25">Retargeting the warm audience</div><div style="font-size: 16px; line-height: 1.55; color: #5C5762">Retargeting people who had already engaged brought installs for NZ$5.38 each on Meta in July, versus NZ$49 for cold NZ audiences in June.</div></div>
+<div style="background: #FFFDFA; border: 1px solid #E9E2D6; border-radius: 18px; padding: 24px; display: flex; flex-direction: column; gap: 10px"><div style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 15px; color: #5C5762">02</div><div style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 21px; line-height: 1.25">Going where Gen Z is</div><div style="font-size: 16px; line-height: 1.55; color: #5C5762">TikTok and Snapchat launched in July and drove 1,080 installs in two months, 92% of paid installs in that period.</div></div>
+</div>
+</div>
+</section>
+
+<section aria-label="Channel comparison" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 760px"><div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5C5762">Channels · July – August</div><h2 style="margin: 0; font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: clamp(28px, 2.8vw, 36px); line-height: 1.1; letter-spacing: -0.025em">Where the budget worked hardest</h2></div>
+<div style="display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 24px; align-items: stretch">
+<figure role="img" aria-label="Cost per install by channel, July to August: TikTok NZ$13.73 for 544 installs, Snapchat NZ$14.38 for 536 installs, Meta NZ$27.49 for 95 installs" style="margin: 0; background: #FFFFFF; border: 1px solid #E9E2D6; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 22px">
+<figcaption style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 21px">Cost per install by channel (NZ$)</figcaption>
+<div title="TikTok: NZ$13.73 per install, 544 installs" style="display: grid; grid-template-columns: 100px 1fr; gap: 16px; align-items: center"><span style="font-size: 16px; font-weight: 600">TikTok</span><div style="display: flex; align-items: center; gap: 12px"><span style="height: 28px; width: 38%; background: #300045; border-radius: 0 4px 4px 0"></span><span style="font-size: 15px; white-space: nowrap"><strong>$13.73</strong> <span style="color: #5C5762">· 544 installs</span></span></div></div>
+<div title="Snapchat: NZ$14.38 per install, 536 installs" style="display: grid; grid-template-columns: 100px 1fr; gap: 16px; align-items: center"><span style="font-size: 16px; font-weight: 600">Snapchat</span><div style="display: flex; align-items: center; gap: 12px"><span style="height: 28px; width: 40%; background: #300045; border-radius: 0 4px 4px 0"></span><span style="font-size: 15px; white-space: nowrap"><strong>$14.38</strong> <span style="color: #5C5762">· 536 installs</span></span></div></div>
+<div title="Meta: NZ$27.49 per install, 95 installs" style="display: grid; grid-template-columns: 100px 1fr; gap: 16px; align-items: center"><span style="font-size: 16px; font-weight: 600">Meta</span><div style="display: flex; align-items: center; gap: 12px"><span style="height: 28px; width: 76%; background: #D9CFE0; border-radius: 0 4px 4px 0"></span><span style="font-size: 15px; white-space: nowrap"><strong>$27.49</strong> <span style="color: #5C5762">· 95 installs</span></span></div></div>
+<span style="font-size: 14px; color: #5C5762; border-top: 1px solid #E9E2D6; padding-top: 14px">Lower is better. Spend: TikTok NZ$7.5K, Snapchat NZ$7.7K, Meta NZ$2.6K.</span>
+</figure>
+<div style="background: #FFC94C; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; justify-content: center; gap: 14px">
+<div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5C5762; color: #3D2A00">TikTok, NZ &amp; AU</div>
+<div style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 56px; line-height: 1; letter-spacing: -0.03em">⅓ the cost</div>
+<div style="font-size: 18px; line-height: 1.5">Android installs cost NZ$8.77 vs NZ$25.92 on iOS, so half of the August TikTok budget went to Android installs.</div>
+</div>
+</div>
+</section>
+
+<section aria-label="Next case study" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px">
+<a class="next" href="/ahoy-connect.html" style="text-decoration: none; color: #040005; border: 1px solid #E9E2D6; border-radius: 24px; padding: 36px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; transition: all 200ms ease">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5C5762">Next case study</div>
+<div style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 28px; line-height: 1.2; letter-spacing: -0.02em">Planning and building social content for a B2B community platform</div>
+<div style="font-size: 16px; color: #5C5762">AhoyConnect</div>
+</div>
+<span style="font-size: 28px; font-weight: 600" aria-hidden="true">→</span>
+</a>
+</section>
+
+<footer id="contact" style="background: #300045; color: #FFFDFA">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px 40px; display: flex; flex-direction: column; gap: 64px">
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 24px">
+<h2 style="margin: 0; font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: clamp(34px, 3.6vw, 48px); line-height: 1.08; letter-spacing: -0.025em">Let's work together.</h2>
+<p style="margin: 0; font-size: 19px; line-height: 1.55; color: rgba(255,253,250,0.8); max-width: 540px">Looking for someone to own growth across email, paid and funnels? I'd like to hear about it.</p>
+<div id="resume" style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px 28px">
+<a class="btn-primary" href="/assets/Kristina_Gaytandzhieva_CV_2026.pdf" target="_blank" rel="noopener" download="Kristina_Gaytandzhieva_CV_2026.pdf" style="background: #FFC94C; color: #040005; text-decoration: none; padding: 16px 28px; border-radius: 12px; font-size: 18px; font-weight: 600; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg>Download my CV</a>
+<span style="font-size: 16px; color: rgba(255,253,250,0.72)">or email <a href="mailto:kristina.st.ivanova@gmail.com" style="color: #FFFDFA; text-decoration: underline; text-underline-offset: 3px">kristina.st.ivanova@gmail.com</a></span>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding-top: 24px; border-top: 1px solid rgba(255,253,250,0.18); font-size: 15px; color: rgba(255,253,250,0.72)">
+<span>© Kristina Gaytandzhieva 2026</span>
+<a href="https://www.linkedin.com/in/kristina-gaitanova/" target="_blank" rel="noopener" style="color: rgba(255,253,250,0.85)">LinkedIn</a>
+</div>
+</div>
+</footer>
+
+</div>
+</div>
+
+<script>document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.nav-mobile-panel a');if(a){var d=a.closest('details');if(d)d.open=false}});</script>
+
+</body>
+</html>

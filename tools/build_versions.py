@@ -89,12 +89,13 @@ ENT_PAGE = {
 
 
 VERSIONS = {
-    '48217': ('startup', [], {}),
+    '': ('main site (startup)', [], {}),          # the public root: indexable
+    '48217': ('startup, hidden copy', [], {}),
     '90563': ('enterprise', ENT_ALL, ENT_PAGE),
 }
 
 def paths(t, code):
-    base = '/' + code + '/'
+    base = '/' + code + '/' if code else '/'
     t = re.sub(r'(href|src)="(?:\./)?(assets|prototypes)/', r'\1="/\2/', t)
     t = re.sub(r'url\((["\']?)(?:\./)?assets/', r'url(\1/assets/', t)
     t = t.replace('href="favicon.svg"', 'href="/favicon.svg"')
@@ -105,7 +106,7 @@ def paths(t, code):
 def main():
     bad = []
     for code, (name, allmap, pagemap) in VERSIONS.items():
-        out = os.path.join(ROOT, code); os.makedirs(out, exist_ok=True)
+        out = os.path.join(ROOT, code) if code else ROOT; os.makedirs(out, exist_ok=True)
         for p in PAGES:
             t = open(os.path.join(SRC, p + '.html'), encoding='utf-8').read()
             for a, b in allmap:
@@ -114,7 +115,8 @@ def main():
                 if a not in t: bad.append(f'{name}/{p}: {a[:70]}')
                 t = t.replace(a, b)
             t = paths(t, code)
-            t = t.replace('<meta name="viewport"', '<meta name="robots" content="noindex, nofollow">\n<meta name="viewport"', 1)
+            if code:
+                t = t.replace('<meta name="viewport"', '<meta name="robots" content="noindex, nofollow">\n<meta name="viewport"', 1)
             open(os.path.join(out, p + '.html'), 'w', encoding='utf-8').write(t)
         print(f'/{code} ({name}) built')
     if bad:
