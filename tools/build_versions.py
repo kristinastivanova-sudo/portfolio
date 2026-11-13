@@ -44,7 +44,7 @@ ENT_PAGE = {
   ("Shorter paid-media engagements for e-commerce and app brands.", "Focused paid-media engagements for e-commerce and app brands."),
   ("Claude, connected to the marketing stack", "AI-enabled marketing operations"),
   ("Instead of exporting data and switching between tabs, I connect Claude directly to the tools I use. It does the legwork, and I make the calls.",
-   "I connect Claude directly to the ad platforms, analytics, CRM and design tools, so reporting, segmentation and creative production are faster and more consistent, while every decision stays with a person."),
+   "I connect Claude directly to the ad platforms, analytics, CRM and design tools, so reporting, segmentation and creative production are faster and more consistent. I review and approve every change, and nothing goes live without my sign-off."),
   ("The full funnel, not just one channel", "End-to-end ownership of the growth funnel"),
   ("Automations, nurture flows and copy that move subscribers from first signup to repeat purchase.",
    "Automated journeys, segmentation and consent-aware email programs that move customers from first signup to repeat purchase."),
@@ -89,10 +89,62 @@ ENT_PAGE = {
 }
 
 
+H = "font-family: 'Schibsted Grotesk', sans-serif"
+LEAD_CARDS = [
+    ('Team and process', 'Took the lead of a four-person social media and PPC team and set up how work is planned, prioritised and tracked on monday.com, while staying hands-on in Meta Ads and email.'),
+    ('Reporting to leadership', 'A weekly update to the founders with the week’s numbers and what was delivered, and task status kept current on monday.com, so priorities and progress are visible at any time.'),
+    ('Working across teams', 'Joint campaigns with sales, new destinations launched with host onboarding, and clear briefs to developers for landing pages and tracking.'),
+]
+def lead_block():
+    cards = ''.join(f'''<div style="background: #FFFDFA; border: 1px solid #E9E2D6; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<h4 style="margin: 0; {H}; font-weight: 700; font-size: 21px; line-height: 1.25; letter-spacing: -0.015em">{t}</h4>
+<p style="margin: 0; font-size: 17px; line-height: 1.55; color: #5C5762">{b}</p></div>''' for t, b in LEAD_CARDS)
+    return f'''
+<div style="display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 8px; padding-top: 16px">
+<h3 style="margin: 0; {H}; font-weight: 700; font-size: clamp(24px, 2.2vw, 28px); letter-spacing: -0.02em">How I lead</h3>
+<p style="margin: 0; font-size: 18px; line-height: 1.55; color: #5C5762">How I run a team and keep leadership in the loop.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px">
+{cards}
+</div>
+</div>
+'''
+
+AI_CARDS = [
+    ('Claude + Meta Ads', 'Faster campaign launches', ['Meta campaigns and ads set up with Claude', 'Every change reviewed before it goes live']),
+    ('Claude + Google Ads &amp; Analytics', 'Faster reporting', ['Weekly reporting in about 5 minutes, down from 1–2 hours', 'Tracking checked and set up', 'Data turned into decisions']),
+    ('Claude + Klaviyo', 'Sharper lifecycle targeting', ['Segments built and checked', 'Products matched to the right audiences', 'Email campaigns designed faster']),
+    ('Claude + Figma', 'Creative at scale', ['Reusable design components', 'Social posts and ad images, fast']),
+    ('Claude Design', 'Landing pages without a dev queue', ['Design systems', 'Landing pages and a blog', 'Club pages for Google Ads traffic']),
+    ('Building with Claude', 'Shipping without engineering', ['A live e-commerce store in days', 'Stripe checkout, courier API, custom admin']),
+]
+CHIP = 'align-self: flex-start; font-size: 14px; font-weight: 700; padding: 6px 12px; border-radius: 999px; background: #FFFDFA; border: 1px solid #E9E2D6">'
+def enterprise_post(p, t):
+    t = t.replace('/assets/Kristina_Gaytandzhieva_CV_2026.pdf', '/assets/e/Kristina_Gaytandzhieva_CV_2026.pdf')
+    if p == 'index':
+        start = t.index('\n<div style="display: flex; flex-direction: column; gap: 32px">\n<div style="display: flex; flex-direction: column; gap: 8px; padding-top: 16px">')
+        end = t.index('</section>', start)
+        t = t[:start] + lead_block() + t[end:]
+        for tool, title, items in AI_CARDS:
+            old_start = t.index(CHIP + tool + '</span>')
+            ul_end = t.index('</ul>', old_start) + 5
+            lis = ''.join(f'<li>{i}</li>' for i in items)
+            new = (CHIP + title + '</span><span style="font-size: 14px; color: #5C5762; font-weight: 500; margin-top: -6px">' + tool + '</span>'
+                   + '<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 17px; line-height: 1.5; color: #2A2530">' + lis + '</ul>')
+            t = t[:old_start] + new + t[ul_end:]
+    if p == 'ahoy-connect':
+        for a, b in [('href="/90563/luxe-lips.html"', 'href="/90563/learnify.html"'),
+                     ('Lowering the cost per purchase for a beauty brand on Google and Meta', 'Helping motivated learners finish what they start'),
+                     ('Luxe Lips · Consultancy project', 'Learnify Academy · UX case study')]:
+            assert a in t, a
+            t = t.replace(a, b)
+    return t
+
 VERSIONS = {
     '': ('main site (startup)', [], {}),          # the public root: indexable
     '48217': ('startup, hidden copy', [], {}),
-    '90563': ('enterprise', ENT_ALL, ENT_PAGE),
+    '90563': ('enterprise', ENT_ALL, ENT_PAGE, enterprise_post, ['luxe-lips', 'plantsnap', 'story-of-lola']),
 }
 
 def paths(t, code):
@@ -106,9 +158,14 @@ def paths(t, code):
 
 def main():
     bad = []
-    for code, (name, allmap, pagemap) in VERSIONS.items():
+    for code, spec in VERSIONS.items():
+        name, allmap, pagemap = spec[:3]
+        post = spec[3] if len(spec) > 3 else None
+        skip = spec[4] if len(spec) > 4 else []
         out = os.path.join(ROOT, code) if code else ROOT; os.makedirs(out, exist_ok=True)
         for p in PAGES:
+            if p in skip:
+                continue
             t = open(os.path.join(SRC, p + '.html'), encoding='utf-8').read()
             for a, b in allmap:
                 t = t.replace(a, b)
@@ -116,6 +173,8 @@ def main():
                 if a not in t: bad.append(f'{name}/{p}: {a[:70]}')
                 t = t.replace(a, b)
             t = paths(t, code)
+            if post:
+                t = post(p, t)
             if code:
                 t = t.replace('<meta name="viewport"', '<meta name="robots" content="noindex, nofollow">\n<meta name="viewport"', 1)
             open(os.path.join(out, p + '.html'), 'w', encoding='utf-8').write(t)
