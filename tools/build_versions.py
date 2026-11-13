@@ -1,21 +1,19 @@
 #!/usr/bin/env python3
-"""Build the enterprise version of the portfolio into /enterprise.
+"""Build the portfolio versions from src/.
 
-The root pages are the source. This script copies every page into enterprise/,
-makes all internal links absolute (/enterprise/..., /assets/...), adds noindex,
-and swaps in the enterprise wording below. Run it after any change to a root page:
-    python3 tools/build_enterprise.py
-Every replacement must match; the script stops if a source sentence changed.
+src/ holds the source pages (the startup version). It is not deployed (.vercelignore).
+The site root shows a blank page; each version lives in a folder with a random code,
+so nobody can find one version from another. Run after any change in src/:
+    python3 tools/build_versions.py
 """
 import os, re, sys
-
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT = os.path.join(ROOT, 'enterprise')
+SRC = os.path.join(ROOT, 'src')
 PAGES = ['index', 'homefans', 'grow-by-mia', 'katalysta', 'vitesse-running', 'geegee', 'ahoy-connect',
-         'luxe-lips', 'plantsnap', 'story-of-lola', 'learnify', 'drops-of-emotions', 'mymultisport', '404']
+         'luxe-lips', 'plantsnap', 'story-of-lola', 'learnify', 'drops-of-emotions', 'mymultisport']
 
 # Wording used on several pages (titles also appear in homepage cards and next-project cards).
-ALL = [
+ENT_ALL = [
     ('Scaling an AI-driven EdTech platform in a new market', 'Launching an AI-driven EdTech platform in a new market'),
     ('Planning and building social content for a B2B community platform', 'Building a scalable B2B content engine for a SaaS platform'),
     ('A last-minute Black Friday campaign on a small budget', 'Doubling Black Friday sales with a staged paid-social campaign'),
@@ -23,7 +21,7 @@ ALL = [
      'Leading growth marketing for a football travel marketplace, with AI-enabled workflows'),
 ]
 
-PAGE = {
+ENT_PAGE = {
  'index': [
   ("AI-first growth marketing", "Full-funnel growth, scaled with AI"),
   ("with a designer's touch", "and a customer-experience lens"),
@@ -62,8 +60,10 @@ PAGE = {
  ],
  'homefans': [
   ("Team lead &amp; hands-on growth", "Team leadership · contract"),
-  ("At Homefans I led two teams, social media and PPC, and owned Meta Ads and email myself. I worked closely with host onboarding on supply and with sales on joint campaigns. Claude was connected to most of the stack, so a small team covered a lot of ground.",
-   "On a contract alongside my full-time role, I led the social media and PPC teams at Homefans and owned Meta Ads and lifecycle email myself, working across host onboarding, sales and engineering. With Claude connected to most of the stack, a small team covered a lot of ground."),
+  ("Homefans · Marketing Lead · Football travel marketplace", "Homefans · Growth Lead (contract) · Football travel marketplace"),
+  ("Marketing Lead: team of 4, plus hands-on", "Embedded growth lead (contract): team of 4, plus hands-on"),
+  ("At Homefans I run two teams, social media and PPC, and own Meta Ads and email myself. I work closely with host onboarding on supply and with sales on joint campaigns. Claude is connected to most of the stack, so a small team covers a lot of ground.",
+   "On a contract alongside my full-time role, I lead the social media and PPC teams at Homefans and own Meta Ads and lifecycle email myself, working across host onboarding, sales and engineering. With Claude connected to most of the stack, a small team covers a lot of ground."),
  ],
  'grow-by-mia': [
   ("a full funnel of lead magnets, webinars, email flows and Meta Ads that sold a €5,000 flagship program to 100+ women.",
@@ -87,37 +87,38 @@ PAGE = {
  ],
 }
 
-def paths(t):
-    # internal page links -> /enterprise/<page>.html ; anchors on home -> /enterprise/#x ; assets -> /assets/
+
+VERSIONS = {
+    '48217': ('startup', [], {}),
+    '90563': ('enterprise', ENT_ALL, ENT_PAGE),
+}
+
+def paths(t, code):
+    base = '/' + code + '/'
     t = re.sub(r'(href|src)="(?:\./)?(assets|prototypes)/', r'\1="/\2/', t)
     t = re.sub(r'url\((["\']?)(?:\./)?assets/', r'url(\1/assets/', t)
     t = t.replace('href="favicon.svg"', 'href="/favicon.svg"')
-    t = re.sub(r'href="(?:\./)?([a-z0-9-]+\.html)(#[^"]*)?"', lambda m: f'href="/enterprise/{"" if m.group(1)=="index.html" else m.group(1)}{m.group(2) or ""}"', t)
-    t = re.sub(r'href="\./(#[^"]*)?"', lambda m: f'href="/enterprise/{m.group(1) or ""}"', t)
-    t = t.replace('href="./"', 'href="/enterprise/"').replace('href="/"', 'href="/enterprise/"')
+    t = re.sub(r'href="(?:\./)?([a-z0-9-]+\.html)(#[^"]*)?"', lambda m: f'href="{base}{"" if m.group(1)=="index.html" else m.group(1)}{m.group(2) or ""}"', t)
+    t = re.sub(r'href="\./(#[^"]*)?"', lambda m: f'href="{base}{m.group(1) or ""}"', t)
     return t
 
 def main():
-    os.makedirs(OUT, exist_ok=True)
     bad = []
-    for p in PAGES:
-        src = os.path.join(ROOT, p + '.html')
-        if not os.path.exists(src):
-            continue
-        t = open(src, encoding='utf-8').read()
-        for a, b in ALL:
-            t = t.replace(a, b)
-        for a, b in PAGE.get(p, []):
-            if a not in t:
-                bad.append(f'{p}: {a[:70]}')
-            t = t.replace(a, b)
-        t = paths(t)
-        # on the homepage, in-page anchors like href="#work" stay as they are (same page)
-        t = t.replace('<meta name="viewport"', '<meta name="robots" content="noindex">\n<meta name="viewport"', 1)
-        open(os.path.join(OUT, p + '.html'), 'w', encoding='utf-8').write(t)
+    for code, (name, allmap, pagemap) in VERSIONS.items():
+        out = os.path.join(ROOT, code); os.makedirs(out, exist_ok=True)
+        for p in PAGES:
+            t = open(os.path.join(SRC, p + '.html'), encoding='utf-8').read()
+            for a, b in allmap:
+                t = t.replace(a, b)
+            for a, b in pagemap.get(p, []):
+                if a not in t: bad.append(f'{name}/{p}: {a[:70]}')
+                t = t.replace(a, b)
+            t = paths(t, code)
+            t = t.replace('<meta name="viewport"', '<meta name="robots" content="noindex, nofollow">\n<meta name="viewport"', 1)
+            open(os.path.join(out, p + '.html'), 'w', encoding='utf-8').write(t)
+        print(f'/{code} ({name}) built')
     if bad:
         print('Source text changed, update the map:\n  ' + '\n  '.join(bad)); sys.exit(1)
-    print('enterprise/ built:', len(PAGES), 'pages')
 
 if __name__ == '__main__':
     main()
