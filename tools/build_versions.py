@@ -23,13 +23,14 @@ ENT_ALL = [
 
 ENT_PAGE = {
  'index': [
+  ("Homefans · current role", "Homefans · Consulting engagement"),
   ("AI-first growth marketing", "Full-funnel growth, scaled with AI"),
   ("with a designer's touch", "and a customer-experience lens"),
   ("I'm Kristina, a growth marketing manager with 10+ years in startups and hands-on UX training. I lead teams, run paid, email and funnels, and use AI to design, build and ship faster.",
    "I'm Kristina, a growth marketing manager with 10+ years across EdTech, mobile apps, SaaS and marketplaces. I lead cross-functional teams, own paid media, lifecycle and conversion, and build AI-enabled workflows that make marketing faster and more measurable."),
   ("Growth work, measured in revenue and retention", "Measurable impact across acquisition, conversion and retention"),
   ("Running the social and PPC teams, owning Meta Ads and email, and connecting Claude to the marketing stack.",
-   "Leading the social and PPC teams on a contract basis, owning Meta Ads and lifecycle email, and aligning campaigns with sales and supply."),
+   "As a consultant, leading the social and PPC teams and setting up their processes, owning Meta Ads and lifecycle email, and aligning campaigns with sales and supply."),
   ("Lead magnets, email flows and paid ads that turned cold leads into buyers of a €5,000 flagship program.",
    "A full-funnel system of lead magnets, lifecycle email and paid media that converted cold audiences into buyers of a €5,000 program."),
   ("Fear-specific lead magnets, concrete career messaging and behavior-based emails that turned a 0.7% conversion launch in Georgia into a profitable engine.",
@@ -59,11 +60,11 @@ ENT_PAGE = {
    "Looking for someone to own growth across paid media, lifecycle and conversion, and to bring AI into how your team works? I'd like to hear about it."),
  ],
  'homefans': [
-  ("Team lead &amp; hands-on growth", "Team leadership · contract"),
-  ("Homefans · Marketing Lead · Football travel marketplace", "Homefans · Growth Lead (contract) · Football travel marketplace"),
-  ("Marketing Lead: team of 4, plus hands-on", "Embedded growth lead (contract): team of 4, plus hands-on"),
+  ("Team lead &amp; hands-on growth", "Team leadership · consulting"),
+  ("Homefans · Marketing Lead · Football travel marketplace", "Homefans · Growth Lead (consultant) · Football travel marketplace"),
+  ("Marketing Lead: team of 4, plus hands-on", "Growth lead (consultant): team of 4, plus hands-on"),
   ("At Homefans I run two teams, social media and PPC, and own Meta Ads and email myself. I work closely with host onboarding on supply and with sales on joint campaigns. Claude is connected to most of the stack, so a small team covers a lot of ground.",
-   "On a contract alongside my full-time role, I lead the social media and PPC teams at Homefans and own Meta Ads and lifecycle email myself, working across host onboarding, sales and engineering. With Claude connected to most of the stack, a small team covers a lot of ground."),
+   "As a consultant, I took the lead of the social media and PPC teams at Homefans and set up the processes they run on: planning, prioritisation and reporting. I also own Meta Ads and lifecycle email, working across host onboarding, sales and engineering. With Claude connected to most of the stack, a small team covers a lot of ground."),
  ],
  'grow-by-mia': [
   ("a full funnel of lead magnets, webinars, email flows and Meta Ads that sold a €5,000 flagship program to 100+ women.",
