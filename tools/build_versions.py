@@ -25,9 +25,9 @@ ENT_PAGE = {
  'index': [
   ("Homefans · current role", "Homefans · Consulting engagement"),
   ("AI-first growth marketing", "Full-funnel growth, scaled with AI"),
-  ("with a designer's touch", "and a customer-experience lens"),
+  ('<span style="display: block; margin-top: 14px; font-family: \'Figtree\', sans-serif; font-style: italic; font-weight: 400; font-size: max(24px, 0.5em); line-height: 1.2; letter-spacing: -0.01em; color: #2A2530">with a designer\'s touch</span>', ""),
   ("I'm Kristina, a growth marketing manager with 10+ years in startups and hands-on UX training. I lead teams, run paid, email and funnels, and use AI to design, build and ship faster.",
-   "I'm Kristina, a growth marketing manager with 10+ years across EdTech, mobile apps, SaaS and marketplaces. I lead cross-functional teams, own paid media, lifecycle and conversion, and build AI-enabled workflows that make marketing faster and more measurable."),
+   "I'm Kristina, a growth marketing manager with 10+ years across EdTech, mobile apps, SaaS and marketplaces. I own paid media, lifecycle and conversion, and build AI-enabled workflows that make marketing faster and more measurable."),
   ("Growth work, measured in revenue and retention", "Measurable impact across acquisition, conversion and retention"),
   ("Running the social and PPC teams, owning Meta Ads and email, and connecting Claude to the marketing stack.",
    "As a consultant, leading the social and PPC teams and setting up their processes, owning Meta Ads and lifecycle email, and aligning campaigns with sales and supply."),
